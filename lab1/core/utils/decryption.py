@@ -11,7 +11,7 @@ class Decryptor:
     def decrypt(self, show_key=False, verbose=False):
         if verbose:
             print("\nИсходный текст в зашифрованном виде:")
-            display_text_as_table(self.letters, self.key, show_key=show_key)
+            display_text_as_table(self.letters, ''.join(sorted(self.key)), show_key=show_key)
         permutation_order = get_permutation_by_key(self.key)
         inverse_permutation = np.argsort(permutation_order)
         self.letters = self.letters[:, inverse_permutation]
