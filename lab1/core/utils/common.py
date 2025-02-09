@@ -28,7 +28,7 @@ def next_multiple(number: int, n: int) -> int:
 
 
 def preprocess_text(text: str):
-    return text.replace('\n', '⏎')
+    return text.lower().replace('\n', '⏎')
 
 
 def restore_text(text: str):
